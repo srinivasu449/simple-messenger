@@ -13,7 +13,7 @@ Steps to Run the Application:
 1. Clone or download the git repository named simple-messenger to your local.
 2. Open your command line and change your directory to simple-messenger.
 3. Run 'mvn clean install' to build the application.
-4. Then go to '/target' directory where you will find 'simple-messenger-0.0.1-SNAPSHOT.jar' file and then run 'java -jar simple-messenger-0.0.1-SNAPSHOT.jar' (by default the application will start on 8089, if you want to change the port then add the following tag '--server.port=<portNumber>' while running the jar file, else traverse to src\main\resources\application.properties and change 'server.port' value to your own port).
+4. Then go to '/target' directory where you will find 'simple-messenger-0.0.1-SNAPSHOT.jar' file and then run 'java -jar simple-messenger-0.0.1-SNAPSHOT.jar' (by default the application will start on 8089, if you want to change the port then add the following tag '--server.port={portNumber}' while running the jar file, else traverse to src\main\resources\application.properties and change 'server.port' value to your own port).
 5. On the application start a in memory DB schema will be created. With auto populated users data in users table. Find the schema at path '\src\main\resources\schema.sql' and users table data at '\src\main\resources\data.sql'.
 
 Note: As we are not using a persistense database the data inserted will be cleared after each restart of the server. also access Get Users API to find the existing users id, so that we can use the 'userId' field value (i.e userId value is used as a senderId or recipientId in messenger API's) to send messages from one user to another, and to get messages.
