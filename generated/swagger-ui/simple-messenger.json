@@ -102,7 +102,7 @@
         "recipientId" : {
           "type" : "integer",
           "format" : "int32",
-          "example" : 4,
+          "example" : 2,
           "description" : "recipientId"
         },
         "message" : {
@@ -115,7 +115,7 @@
     "Messages" : {
       "type" : "object",
       "properties" : {
-        "id" : {
+        "messageId" : {
           "type" : "integer",
           "format" : "int32"
         },
@@ -138,7 +138,7 @@
     "Users" : {
       "type" : "object",
       "properties" : {
-        "id" : {
+        "userId" : {
           "type" : "integer",
           "format" : "int32"
         },

@@ -20,7 +20,8 @@ public class Messages implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
+	@Column(name = "message_id")
+	private Integer messageId;
 
 	@Column(name = "sender_id")
 	private Integer senderId;
@@ -37,12 +38,12 @@ public class Messages implements Serializable {
 
 	}
 
-	public Integer getId() {
-		return id;
+	public Integer getMessageId() {
+		return messageId;
 	}
 
-	public void setId(Integer id) {
-		this.id = id;
+	public void setMessageId(Integer messageId) {
+		this.messageId = messageId;
 	}
 
 	public Integer getSenderId() {
@@ -87,7 +88,7 @@ public class Messages implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Messages [id=" + id + ", senderId=" + senderId + ", recipientId=" + recipientId + ", message=" + message
+		return "Messages [messageId=" + messageId + ", senderId=" + senderId + ", recipientId=" + recipientId + ", message=" + message
 				+ ", createdAt=" + createdAt + "]";
 	}
 

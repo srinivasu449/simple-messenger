@@ -20,7 +20,8 @@ public class Users implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
+	@Column(name = "user_id")
+	private Integer userId;
 
 	@Column(name = "first_name")
 	private String firstName;
@@ -34,12 +35,12 @@ public class Users implements Serializable {
 	public Users() {
 	}
 
-	public Integer getId() {
-		return id;
+	public Integer getUserId() {
+		return userId;
 	}
 
-	public void setId(Integer id) {
-		this.id = id;
+	public void setUserId(Integer userId) {
+		this.userId = userId;
 	}
 
 	public String getFirstName() {
@@ -75,7 +76,7 @@ public class Users implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Users [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", userName=" + userName
+		return "Users [userId=" + userId + ", firstName=" + firstName + ", lastName=" + lastName + ", userName=" + userName
 				+ "]";
 	}
 }
