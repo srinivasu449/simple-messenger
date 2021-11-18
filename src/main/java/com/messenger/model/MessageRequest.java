@@ -6,7 +6,7 @@ public class MessageRequest {
 
 	@ApiModelProperty(value = "senderId", example = "1", required = true)
 	private Integer senderId;
-	@ApiModelProperty(value = "recipientId", example = "4", required = true)
+	@ApiModelProperty(value = "recipientId", example = "2", required = true)
 	private Integer recipientId;
 	@ApiModelProperty(value = "message", example = "sender message", required = true)
 	private String message;
