@@ -1,0 +1,18 @@
+DROP TABLE IF EXISTS users;
+
+CREATE TABLE users (
+  id INT(11) NOT NULL AUTO_INCREMENT  PRIMARY KEY,
+  first_name VARCHAR(250) NOT NULL,
+  last_name VARCHAR(250) NOT NULL,
+  username VARCHAR (250) NOT NULL UNIQUE
+);
+  
+DROP TABLE IF EXISTS messages;
+
+CREATE TABLE messages (
+  id INT(11) NOT NULL AUTO_INCREMENT  PRIMARY KEY,
+  sender_id INT(11) NOT NULL,
+  recipient_id INT(11) NOT NULL,
+  message VARCHAR(1000),
+  created_at VARCHAR(100) NOT NULL
+);
