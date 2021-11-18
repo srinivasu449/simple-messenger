@@ -17,3 +17,27 @@ Steps to Run the Application:
 
 H2 Console Access:
 Access 'http://localhost:8089/h2-console' and the console looks like this.
+
+![](images/h2-login-page.JPG)
+
+Login Details:
+1. Driver class: org.h2.Driver
+2. JDBC Url: jdbc:h2:file:./data/simple-messenger-db
+3. username: sa
+4. password: password
+
+make sure the you use the above details and connect to DB. The console should like the below image.
+
+![](images/h2-console.JPG)
+
+Once you see the console insert some values into users table.
+
+Sample Insert Query to add users: 
+
+INSERT INTO users (first_name, last_name, username) VALUES
+  ('Atlanta', 'GA', 'atlanta.ga'),
+  ('Denver', 'CO', 'denver.co'),
+  ('Seattle', 'WA', 'seattle.wa');
+  
+5. Now you are set to use the messenger API's to send and get messages.
+6. Find the swagger documentation in 
