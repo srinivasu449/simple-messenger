@@ -16,6 +16,7 @@ Steps to Run the Application:
 4. On the application start the DB schema will be created. and we need to access h2 console to add users before we start using API for sending messages and getting messages.
 
 H2 Console Access:
+
 Access 'http://localhost:8089/h2-console' and the console looks like this.
 
 ![](images/h2-login-page.JPG)
@@ -26,11 +27,13 @@ Login Details:
 3. username: sa
 4. password: password
 
-make sure the you use the above details and connect to DB. The console should like the below image.
+make sure you use the above details and connect to DB. The console should look like the below image.
 
 ![](images/h2-console.JPG)
 
 Once you see the console insert some values into users table.
+
+Find the schema at '\src\main\resources\schema.sql' and users table data '\src\main\resources\data.sql' .
 
 Sample Insert Query to add users: 
 
@@ -40,4 +43,18 @@ INSERT INTO users (first_name, last_name, username) VALUES
   ('Seattle', 'WA', 'seattle.wa');
   
 5. Now you are set to use the messenger API's to send and get messages.
-6. Find the swagger documentation in 
+6. Find the swagger API documentation in '\generated\swagger-ui\simple-messenger.json'.
+7. We can access API's using swagger.io by importing the 'simple-messenger.json' file.
+8. Access API's using postman.
+
+Access Get Users API to find the users id, so that we can use the 'id' field to send messages from one user to another. and also to get messages
+
+![](images/get-users.JPG)
+
+Post API to send a message
+
+![](images/send-message.JPG)
+
+Get API to access messages from sender
+
+![](images/get-messages.JPG)
